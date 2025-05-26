@@ -1,0 +1,4 @@
+venv/
+email_project/email_project/__pycache__/
+email_project/mailapp/__pycache__/
+email_project/mailapp/migrations/__pycache__/
