@@ -3,13 +3,13 @@ django_project
 
 
 #for run celery worker:
-celery -A email_project.email_project worker --loglevel=info
+celery -A email_project worker --loglevel=info
 
 #Celery beat scheduler
-celery -A email_project.email_project beat --loglevel=info
+celery -A email_project beat --loglevel=info
 
 #Django server
-python email_project.manage.py runserver
+python manage.py runserver
 
 #for run without celery
 curl -X POST http://127.0.0.1:8000/send-email/ \

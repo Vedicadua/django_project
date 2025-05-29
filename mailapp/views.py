@@ -42,7 +42,7 @@ def send_email_view(request):
             args=(subject, message, from_email, recipient_list),
         ).start()
 
-        return JsonResponse({"status": "Email is being sent in the background!"})
+        return JsonResponse({"status": "Email is being sent in the background"})
 
     except (KeyError, json.JSONDecodeError, ValueError) as e:
         logger.error(f"Invalid input data: {str(e)}")
